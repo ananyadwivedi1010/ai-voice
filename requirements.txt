@@ -1,0 +1,27 @@
+# Core LLM
+groq==0.9.0
+
+# API
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.9.2
+
+# Data
+pandas==2.2.3
+
+# Voice (TTS + STT) — optional for voice_demo.py
+gTTS==2.5.3
+SpeechRecognition==3.10.4
+PyAudio==0.2.14
+playsound==1.3.0
+
+# Utilities
+python-dotenv==1.0.1
+tenacity==9.0.0
+
+# Testing
+pytest==8.3.3
+pytest-mock==3.14.0
+
+# Dev
+httpx==0.27.2

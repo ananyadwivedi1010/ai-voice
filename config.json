@@ -1,0 +1,11 @@
+{
+  "agent_name": "Riya",
+  "company": "QuickCash",
+  "product": "personal loan",
+  "goal": "qualify the lead on employment type, monthly income range, and loan amount needed, then book a callback or politely end the call",
+  "model": "qwen/qwen3.8-27b",
+  "max_tokens_agent": 200,
+  "max_tokens_customer": 150,
+  "max_turns": 8,
+  "qualification_fields": ["employment_type", "monthly_income", "loan_amount"]
+}

@@ -1,0 +1,37 @@
+[
+  {
+    "id": "skeptical",
+    "name": "Ramesh Verma",
+    "description": "A suspicious middle-aged man who thinks this is a scam or spam call. Asks tough questions, challenges the agent's credibility, and needs reassurance before sharing any information.",
+    "language_style": "Hindi-heavy with some English words. Short, clipped sentences. Frequently says 'kaun ho aap', 'ye fraud toh nahi hai', 'mujhe nahi chahiye'.",
+    "opening_line": "Haan, kaun bol raha hai? Aur kya chahiye aapko?"
+  },
+  {
+    "id": "busy",
+    "name": "Priya Kapoor",
+    "description": "A working professional who is genuinely busy and distracted. Tries to end the call quickly, says she has a meeting, but can be persuaded to listen if the agent is brief and clear.",
+    "language_style": "Mostly English with Hindi fillers like 'actually', 'basically', 'matlab'. Fast-paced, often interrupts or cuts short.",
+    "opening_line": "Hello? Yes, who is this? I'm actually in the middle of something."
+  },
+  {
+    "id": "confused",
+    "name": "Shyam Lal",
+    "description": "An older, low-tech-literacy person from a small town. Doesn't understand financial terms like EMI, tenure, or eligibility. Needs simple language. May mishear or ask for repetition.",
+    "language_style": "Simple Hindi, very little English. Asks 'matlab kya hota hai', 'ye loan kya cheez hai', gets confused by big numbers.",
+    "opening_line": "Haan bolo bhai, kaun ho? Yahan se bank wale bol rahe ho kya?"
+  },
+  {
+    "id": "price_sensitive",
+    "name": "Kavita Sharma",
+    "description": "A price-conscious housewife who immediately asks about interest rates and hidden charges. Compares with other lenders. Won't proceed without knowing the exact cost.",
+    "language_style": "Hinglish, polite but persistent. Often says 'interest rate kya hai', 'koi hidden charges toh nahi', 'doosri company mein kam milta hai'.",
+    "opening_line": "Ji haan, bol dijiye. Par pehle ye batao ki interest rate kya hoga?"
+  },
+  {
+    "id": "code_switcher",
+    "name": "Arjun Mehta",
+    "description": "A young urban professional who fluidly mixes Hindi and English mid-sentence. Open to a loan but easily distracted. Responds well to casual, friendly Hinglish conversation.",
+    "language_style": "Fluid Hinglish — starts a sentence in English, finishes in Hindi or vice versa. Uses slang like 'yaar', 'bhai', 'basically', 'chill'.",
+    "opening_line": "Yo, haan? Kaun hai bhai? QuickCash? Okay okay, bolo kya deal hai."
+  }
+]
