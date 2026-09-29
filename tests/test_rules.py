@@ -75,7 +75,7 @@ class TestOutcomeDetection:
     def test_dropped_hits_max_turns(self):
         """No clear ending — should be dropped."""
         agent_turns = [
-            "Namaste, main Riya hoon QuickCash se.",
+            "Namaste, main Annie hoon QuickCash se.",
             "Aap salaried hain ya business karte hain?",
         ]
         customer_turns = [
@@ -192,7 +192,7 @@ class TestV2WordLimit:
 
     def test_multiple_short_clean_passes(self):
         turns = [
-            "Namaste, main Riya hoon.",
+            "Namaste, main Annie hoon.",
             "Aap salaried hain?",
             "Kitne ka loan chahiye?",
         ]
@@ -346,7 +346,7 @@ class TestRunRuleChecks:
 class TestIntegration:
     def test_good_agent_turns(self):
         turns = [
-            "Namaste! Main Riya hoon QuickCash se.",
+            "Namaste! Main Annie hoon QuickCash se.",
             "Aap job karte hain ya business?",
             "Aur monthly income roughly kitni hai?",
             "Kitne ka loan chahiye aapko?",
@@ -359,7 +359,7 @@ class TestIntegration:
 
     def test_bad_agent_turns(self):
         turns = [
-            "Hello! I am **Riya** from QuickCash.\n- Low rates\n- Fast approval\n- 100% guaranteed",
+            "Hello! I am **Annie** from QuickCash.\n- Low rates\n- Fast approval\n- 100% guaranteed",
             "The interest rate is 9.5% per annum, and your loan is pre-approved!",
         ]
         assert check_has_markdown_or_list(turns) is True

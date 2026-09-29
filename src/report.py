@@ -93,7 +93,7 @@ def run_report() -> None:
     # 2. Compliance failure rate by version
     # -----------------------------------------------------------------------
     print_section("2. COMPLIANCE FAILURE RATE")
-    sql = queries.get("compliance_by_version", """
+    sql = """
         SELECT
             c.prompt_version,
             ROUND(AVG(s.compliance_fail) * 100, 1) as compliance_fail_pct
@@ -101,7 +101,7 @@ def run_report() -> None:
         JOIN scores s ON c.id = s.conversation_id
         GROUP BY c.prompt_version
         ORDER BY c.prompt_version
-    """)
+    """
     rows = db.fetch_raw(sql)
     if rows:
         df = pd.DataFrame([dict(r) for r in rows])
@@ -134,7 +134,7 @@ def run_report() -> None:
     # 4. Qualification completion rate
     # -----------------------------------------------------------------------
     print_section("4. QUALIFICATION COMPLETION RATE")
-    sql = queries.get("qualification_rate", """
+    sql = """
         SELECT
             c.prompt_version,
             ROUND(AVG(s.qualification_complete) * 100, 1) as qualification_complete_pct
@@ -142,7 +142,7 @@ def run_report() -> None:
         JOIN scores s ON c.id = s.conversation_id
         GROUP BY c.prompt_version
         ORDER BY c.prompt_version
-    """)
+    """
     rows = db.fetch_raw(sql)
     if rows:
         df = pd.DataFrame([dict(r) for r in rows])

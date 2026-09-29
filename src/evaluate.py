@@ -156,7 +156,7 @@ def run_rule_checks(agent_turns: list[str], version: str = "") -> dict:
 def _build_transcript(turns: list) -> str:
     lines = []
     for t in turns:
-        speaker = "Agent (Riya)" if t["speaker"] == "agent" else "Customer"
+        speaker = "Agent (Annie)" if t["speaker"] == "agent" else "Customer"
         lines.append(f"{speaker}: {t['text']}")
     return "\n".join(lines)
 
@@ -307,7 +307,7 @@ def score_conversation(conv_row, verbose: bool = False) -> dict:
         print(f"Outcome: {conv_row['outcome']} | Turns: {conv_row['num_turns']}")
         print("-" * 60)
         for t in all_turns_dicts:
-            speaker = "Riya   " if t["speaker"] == "agent" else "Customer"
+            speaker = "Annie  " if t["speaker"] == "agent" else "Customer"
             print(f"  [{t['turn_idx']}] {speaker}: {t['text']}")
         print("-" * 60)
         print(f"  qual_complete:      {score['qualification_complete']}")
@@ -381,7 +381,7 @@ def _print_sample(n: int = 10) -> None:
         print(f"\nConversation {row['id']} | {row['prompt_version']} | "
               f"{row['persona']} | {row['outcome']}")
         for t in turns:
-            speaker = "Riya   " if t["speaker"] == "agent" else "Customer"
+            speaker = "Annie  " if t["speaker"] == "agent" else "Customer"
             print(f"  [{t['turn_idx']}] {speaker}: {t['text']}")
         avg = row.get("avg_reply_words") or 0.0
         print(f"  Scores → qual={row['qualification_complete']} | "

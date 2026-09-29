@@ -7,7 +7,7 @@
 
 ## Overview
 
-This project builds and evaluates **Riya**, a Hinglish voice-first sales agent that makes outbound calls for a fictional personal loan company, QuickCash. Riya qualifies leads on 3 criteria (employment type, monthly income, loan amount needed), then books a callback or politely ends the call.
+This project builds and evaluates **Annie**, a Hinglish voice-first sales agent that makes outbound calls for a fictional personal loan company, QuickCash. Annie qualifies leads on 3 criteria (employment type, monthly income, loan amount needed), then books a callback or politely ends the call.
 
 The project includes:
 - **3 prompt versions** (v1, v2, v3) with progressively sophisticated techniques
@@ -220,15 +220,22 @@ pytest tests/test_rules.py -v
 | **v2** | Voice-First Constraints | 1-2 sentence replies, one question at a time, no markdown/lists, numbers spoken naturally ("paanch lakh"), mirror customer's language. |
 | **v3** | Few-Shot + Staged Flow + Guardrails | 4-stage flow (opening → qualification → objection handling → close), 4 few-shot examples for common objections, explicit compliance reminders. |
 
-### Metrics (to be filled after running experiments)
+### Results (computed from 40 simulated conversations — 15 v1, 15 v2, 10 v3)
 
 | Metric | v1 | v2 | v3 |
-|--------|----|----|-------|
-| Qualification Complete % | — | — | — |
-| Avg Words per Reply | — | — | — |
-| Compliance Fail % | — | — | — |
-| Language Match % | — | — | — |
-| Callback Booked % | — | — | — |
+|--------|----|----|-----|
+| Conversations | 15 | 15 | 10 |
+| Callback Booked % | 73.3% | 26.7% | 30.0% |
+| Declined % | 26.7% | 40.0% | 20.0% |
+| Dropped % | 0.0% | 33.3% | 50.0% |
+| Avg Words per Reply | 50.5 | 13.3 | 4.0 |
+| Compliance Fail % | 20.0% | 13.3% | 0.0% |
+| Qualification Complete % | 33.3% | 13.3% | 0.0% |
+| Language Match % (LLM judge) | — | 100.0% | 100.0% |
+| Markdown/List Fail % | 0.0% | 6.7% | 0.0% |
+| Avg Turns per Conversation | 4.6 | 6.5 | 6.6 |
+
+> All numbers computed from SQLite database via `python -m src.report`. Model: `qwen/qwen3.8-27b` via OpenRouter.
 
 ---
 

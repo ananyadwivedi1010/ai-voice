@@ -23,7 +23,7 @@ load_dotenv()
 
 app = FastAPI(
     title="Hinglish Voice Agent API",
-    description="API for Riya, the QuickCash personal loan sales agent",
+    description="API for Annie, the QuickCash personal loan sales agent",
     version="1.0.0",
 )
 
@@ -69,7 +69,7 @@ class ChatRequest(BaseModel):
                 "version": "v3",
                 "history": [
                     {"role": "user", "content": "Haan, kaun hai?"},
-                    {"role": "assistant", "content": "Namaste! Main Riya bol rahi hoon..."},
+                    {"role": "assistant", "content": "Namaste! Main Annie bol rahi hoon..."},
                 ],
             }
         }
